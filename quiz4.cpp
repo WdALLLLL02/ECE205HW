@@ -7,17 +7,17 @@ private:
     int year;
     int ISBN;
 public:
-    Book(string category1, int year1, int ISBN1);
+    Book(string category1,int year1,int ISBN1);
     bool availability();
 };
 
-Book::Book(string category1, int year1, int ISBN1){
-    category = category1;
-    year = year1;
-    ISBN = ISBN1;
+Book::Book(string category1,int year1,int ISBN1){
+    category=category1;
+    year=year1;
+    ISBN=ISBN1;
 }
 bool Book::availability(){
-    if ((year > 1950) && (category == "history")){
+    if ((year>1950)&&(category=="history")){
         return true;
     }
     else{
@@ -27,10 +27,10 @@ bool Book::availability(){
 void display(Book book1);
 void display(Book book1){
     if (book1.availability()){
-        cout << "available" << endl;
+        cout<<"available"<<endl;
     }
     else{
-        cout << "not available" << endl;
+        cout<<"not available"<< endl;
     }
 }
 
@@ -40,9 +40,9 @@ int main(){
     int ISBN;
     cout<<"category:" << endl;
     cin>>category;
-    cout<<"publishing year:" << endl;
+    cout<<"publishing year:"<<endl;
     cin>>year;
-    cout<<"ISBN:" << endl;
+    cout<<"ISBN:"<<endl;
     cin>>ISBN;
     Book book1(category, year, ISBN);
     display(book1);
